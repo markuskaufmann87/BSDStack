@@ -49,6 +49,10 @@ public class StringStack implements IStack {
     return (elementCount == 0);
   }
 
+  /**
+   * method for putting an element on a stack
+   * @param item element to add on a stack
+   */
   @Override
   public void push(String item) {
     logger.info("push");
@@ -60,6 +64,10 @@ public class StringStack implements IStack {
     elementData[elementCount++] = item;
   }
 
+  /**
+   * method to get the top element of a stack
+   * @return top element of the stack
+   */
   @Override
   public String pop() {
     logger.info("pop");
