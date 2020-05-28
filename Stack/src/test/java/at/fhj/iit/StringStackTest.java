@@ -3,9 +3,7 @@ package at.fhj.iit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StringStackTest {
   public IStack sut;
@@ -63,7 +61,13 @@ public class StringStackTest {
    */
   @Test
   public void testPushException() {
-    fail("please implement me...");
+
+
+    assertThrows(IllegalStateException.class,()-> {
+      StringStack stack = new StringStack(1);
+      stack.push("hallo");
+      stack.push("tschau");
+    });
   }
 
   /**
